@@ -1,0 +1,94 @@
+.navbar {
+  padding: 1.25rem 5%;
+}
+
+.nav-icons,
+.page-links {
+  list-style: none;
+}
+
+.logo {
+  display: block;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.page-links,
+.invite-btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.page-links {
+  text-align: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #979797;
+}
+
+.page {
+  padding: 0.25rem;
+  /* font-weight: 700; */
+}
+
+.page-href {
+  text-decoration: none;
+  color: inherit;
+}
+.page-href:hover {
+  border-bottom: 1px solid #000;
+}
+
+.invite-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+.invite-btn:hover {
+  background-color: #dfdfdf;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-icons {
+    display: inline-block;
+  }
+
+  .page-links {
+    border-bottom: none;
+    gap: 3rem;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  .invite-btn {
+    width: fit-content;
+    margin-top: 0;
+  }
+}
