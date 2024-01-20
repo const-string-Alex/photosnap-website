@@ -1,0 +1,64 @@
+/* about class is modified inside home-page.css */
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-info {
+  padding: 5rem 2rem;
+}
+
+.about-title,
+.about-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-title {
+  font-size: 1.9rem;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  padding: 1.5rem 0;
+  /* color: #979797; */
+}
+
+.about-link {
+  text-decoration: none;
+  color: inherit;
+}
+.about-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-paragraph {
+    padding: 1rem 0 2rem 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about-info {
+    padding: 5rem 20rem;
+  }
+
+  .about-paragraph {
+    padding: 1.5rem 0 2.5rem 0;
+  }
+}

@@ -1,10 +1,10 @@
 import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import FeaturesPage from "../pages/FeaturesPage";
-import HomePage from "../pages/HomePage";
-import PricingPage from "../pages/PricingPage";
-import StoriesPage from "../pages/StoriesPage";
+import FeaturesPage from "../../pages/FeaturesPage";
+import HomePage from "../../pages/HomePage/HomePage";
+import PricingPage from "../../pages/PricingPage";
+import StoriesPage from "../../pages/StoriesPage";
 
 function App() {
   return (
