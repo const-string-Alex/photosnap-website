@@ -1,0 +1,48 @@
+.story-article {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.5);
+}
+
+.story-date,
+.story-title,
+.story-author,
+.story-link,
+.arrow {
+  color: #fff;
+  z-index: 1;
+}
+
+.story-title {
+  font-size: 1.5rem;
+}
+
+.story-author {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #979797;
+}
+
+.story-link {
+  padding-top: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.story-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
