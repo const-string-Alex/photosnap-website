@@ -1,0 +1,21 @@
+.feature-page-features {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .feature-page-features {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .feature-page-features {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 6rem;
+  }
+}

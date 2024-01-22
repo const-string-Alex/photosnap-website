@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import Hero from "../components/Hero/Hero";
+import "./feature-page.css";
 
-import { HEROS } from "../data/heros";
+import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Hero from "../../components/Hero/Hero";
+import Feature from "../../components/Feature/Feature";
+
+import { HEROS } from "../../data/heros";
+import { FEATURES } from "../../data/features";
 
 function FeaturesPage() {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
@@ -36,11 +40,22 @@ function FeaturesPage() {
     />
   );
 
+  const features = FEATURES.map((feature) => {
+    return (
+      <Feature
+        key={Math.random() * FEATURES.length}
+        image={feature.image}
+        title={feature.title}
+        content={feature.content}
+      />
+    );
+  });
+
   return (
     <>
       <Navbar />
       {hero}
-      <p>features page</p>
+      <section className="feature-page-features">{features}</section>
     </>
   );
 }
