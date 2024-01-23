@@ -1,0 +1,63 @@
+.package {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+.package-title {
+  font-size: 1.75rem;
+}
+
+.package-description {
+  margin-top: 1.5rem;
+}
+
+.package-pricing {
+  margin: 3rem 0;
+}
+
+.package-price {
+  font-size: 2.5rem;
+}
+
+.pick-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75rem 0;
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.pick-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .package {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .package-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .package-description {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .package {
+    display: inline-block;
+  }
+}
