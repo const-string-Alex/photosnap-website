@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import Package from "../../components/Package/Package";
+import Beta from "../../components/Beta/Beta";
 
 import { HEROS } from "../../data/heros";
 import { PACKAGES } from "../../data/packages";
@@ -58,7 +59,7 @@ function PricingPage() {
   }
 
   return (
-    <>
+    <main>
       <Navbar />
       {hero}
       <section className="packages">
@@ -72,7 +73,8 @@ function PricingPage() {
         </div>
         {packages}
       </section>
-    </>
+      <Beta />
+    </main>
   );
 }
 

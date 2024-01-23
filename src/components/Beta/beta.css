@@ -1,0 +1,52 @@
+.beta {
+  min-height: 288px;
+  padding: 4rem 2rem;
+  background-image: url("/assets//shared/mobile/bg-beta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.beta-title,
+.beta-link {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.beta-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.beta-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.beta-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .beta {
+    background-image: url("/assets//shared/tablet/bg-beta.jpg");
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+  }
+
+  .beta-title {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .beta-link {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .beta {
+    background-image: url("/assets//shared/desktop/bg-beta.jpg");
+    padding: 4rem 8rem;
+  }
+}
