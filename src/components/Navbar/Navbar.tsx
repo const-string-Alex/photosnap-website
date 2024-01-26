@@ -15,7 +15,7 @@ function Navbar() {
       setScreenWidth(window.innerWidth);
     }
 
-    if (screenWidth <= 768) {
+    if (screenWidth < 768) {
       setDisplayStyle("none");
     } else {
       setDisplayStyle("flex");
