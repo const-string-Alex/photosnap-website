@@ -1,43 +1,21 @@
 import "./home-page.css";
 
-import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import About from "../../components/About/About";
 import Footer from "../../components/Footer/Footer";
 
 import { ABOUTS } from "../../data/abouts";
 
-function HomePage() {
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [imageType, setImageType] = useState<string>("mobile");
+interface HomePageProps {
+  imageType: string;
+}
 
-  useEffect(() => {
-    function handleWindowResize() {
-      setScreenWidth(window.innerWidth);
-    }
-
-    if (screenWidth <= 425) {
-      setImageType("mobile");
-    } else if (screenWidth <= 768) {
-      setImageType("tablet");
-    } else {
-      setImageType("desktop");
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.addEventListener("resize", handleWindowResize);
-    };
-  }, [screenWidth]);
-
-  // const imageType = "mobile";
-
+function HomePage(props: HomePageProps) {
   const about = ABOUTS.map((about) => {
     return (
       <About
         key={Math.random() * ABOUTS.length}
-        img={about.images[imageType as keyof typeof about.images]}
+        img={about.images[props.imageType as "mobile" | "tablet" | "desktop"]}
         title={about.title}
         description={about.description}
         isHero={about.isHero}

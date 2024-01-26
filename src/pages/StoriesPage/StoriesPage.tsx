@@ -1,39 +1,21 @@
 import "./stories-page.css";
 
-import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Story from "../../components/Story/Story";
 import Footer from "../../components/Footer/Footer";
 
 import { STORIES } from "../../data/stories";
 
-function StoriesPage() {
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [imageType, setImageType] = useState<string>("mobile");
+interface StoresPageProps {
+  imageType: string;
+}
 
-  useEffect(() => {
-    function handleWindowResize() {
-      setScreenWidth(window.innerWidth);
-    }
-
-    if (screenWidth <= 425) {
-      setImageType("mobile");
-    } else {
-      setImageType("desktop");
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.addEventListener("resize", handleWindowResize);
-    };
-  }, [screenWidth]);
-
+function StoriesPage(props: StoresPageProps) {
   const stories = STORIES.map((story) => {
     return (
       <Story
         key={Math.random() * STORIES.length}
-        image={story.images[imageType as keyof typeof story.images]}
+        image={story.images[props.imageType as "mobile" | "tablet" | "desktop"]}
         date={story.date}
         title={story.title}
         author={story.author}
