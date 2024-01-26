@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import Feature from "../../components/Feature/Feature";
 import Beta from "../../components/Beta/Beta";
+import Footer from "../../components/Footer/Footer";
 
 import { HEROS } from "../../data/heros";
 import { FEATURES } from "../../data/features";
@@ -53,12 +54,15 @@ function FeaturesPage() {
   });
 
   return (
-    <main>
+    <>
       <Navbar />
-      {hero}
-      <section className="feature-page-features">{features}</section>
-      <Beta />
-    </main>
+      <main>
+        {hero}
+        <section className="feature-page-features">{features}</section>
+        <Beta />
+      </main>
+      <Footer />
+    </>
   );
 }
 
