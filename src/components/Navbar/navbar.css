@@ -24,6 +24,7 @@
 
 .page-links,
 .invite-btn {
+  display: none;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -78,6 +79,9 @@
   }
 
   .page-links {
+    display: flex;
+    padding: 0;
+    align-self: center;
     border-bottom: none;
     gap: 3rem;
   }
@@ -87,6 +91,7 @@
   }
 
   .invite-btn {
+    display: block;
     width: fit-content;
     margin-top: 0;
   }
