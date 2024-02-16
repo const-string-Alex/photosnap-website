@@ -9,10 +9,7 @@ interface FeatureProps {
 function Feature(props: FeatureProps) {
   return (
     <div className="feature">
-      <div
-        style={{ backgroundImage: `url(${props.image})` }}
-        className="feature-image"
-      ></div>
+      <img src={props.image} alt={props.title} className="feature-img" />
       <h2 className="feature-title">{props.title}</h2>
       <p>{props.content}</p>
     </div>
