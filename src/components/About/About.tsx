@@ -3,7 +3,7 @@ import blackArrow from "/assets/shared/desktop/blackArrow.svg";
 import whiteArrow from "/assets/shared/desktop/whiteArrow.svg";
 
 interface AboutProps {
-  img: string;
+  image: string;
   title: string;
   description: string;
   isHero: boolean;
@@ -17,10 +17,7 @@ function About(props: AboutProps) {
 
   return (
     <section className="about">
-      <div
-        style={{ backgroundImage: `url(${props.img})` }}
-        className="about-image"
-      ></div>
+      <img src={props.image} alt={props.title} className="about-image" />
       <div style={props.isHero ? heroStyle : {}} className="about-info">
         <h2 className="about-title">{props.title}</h2>
         <p className="about-paragraph">{props.description}</p>

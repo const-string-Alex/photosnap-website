@@ -9,17 +9,14 @@ interface StoryProps {
 
 function Story(props: StoryProps) {
   return (
-    <article
-      style={{ backgroundImage: `url(${props.image})` }}
-      className="story-article"
-    >
+    <article className="story-article">
+      <img src={props.image} alt="Article story" />
       <div className="tint"></div>
-      {props.date ? <p className="story-date">{props.date}</p> : ""}
-      <h2 className="story-title">{props.title}</h2>
-      <h4 className="story-author">by {props.author}</h4>
-      <a href="#" className="story-link">
-        Read story
-      </a>
+      <div className="story-info">
+        {props.date ? <p className="story-date">{props.date}</p> : ""}
+        <h2 className="story-title">{props.title}</h2>
+        <h4 className="story-author">by {props.author}</h4>
+      </div>
     </article>
   );
 }

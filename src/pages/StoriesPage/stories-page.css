@@ -48,7 +48,7 @@
 /* Story component */
 .story-page-stories {
   display: grid;
-  grid-template-rows: repeat(16, 375px);
+  grid-template-rows: repeat(16, 1fr);
 }
 
 @media (min-width: 768px) {
@@ -76,7 +76,7 @@
   /* Story component */
   .story-page-stories {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, 500px);
+    grid-template-rows: repeat(8, 1fr);
   }
 }
 
@@ -89,6 +89,6 @@
   /* Story component */
   .story-page-stories {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 500px);
+    grid-template-rows: repeat(4, 1fr);
   }
 }

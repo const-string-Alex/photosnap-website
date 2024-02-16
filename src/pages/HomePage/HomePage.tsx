@@ -19,7 +19,7 @@ function HomePage(props: HomePageProps) {
     return (
       <About
         key={Math.random() * ABOUTS.length}
-        img={about.images[props.imageType as "mobile" | "tablet" | "desktop"]}
+        image={about.images[props.imageType as "mobile" | "tablet" | "desktop"]}
         title={about.title}
         description={about.description}
         isHero={about.isHero}
